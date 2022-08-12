@@ -11,11 +11,10 @@ class Solution:
                 hour += ceil(pile / speed)
                 
                 if hour > h:
-                    break;
-
-            if hour > h:
-                start = speed + 1
+                    start = speed + 1
+                    break    
             else:
-                end = speed - 1
+                if hour <= h:
+                    end = speed - 1
                   
         return end + 1
