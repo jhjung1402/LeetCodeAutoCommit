@@ -5,16 +5,17 @@ class Solution:
 
         while start <= end:
             speed = (start + end) // 2
-            
+
             hour = 0
             for pile in piles:
                 hour += ceil(pile / speed)
-                
+
                 if hour > h:
                     start = speed + 1
-                    break    
             else:
                 if hour <= h:
                     end = speed - 1
-                  
+
+
         return end + 1
+
