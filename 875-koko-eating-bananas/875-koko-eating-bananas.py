@@ -6,17 +6,12 @@ class Solution:
         while start <= end:
             speed = (start + end) // 2
 
-            hour = 0
-            for pile in piles:
-                hour += ceil(pile / speed)
+            hour = sum([ceil(pile / speed) for pile in piles])
 
-                if hour > h:
-                    start = speed + 1
-                    break
+            if hour <= h:
+                end = speed - 1
             else:
-                if hour <= h:
-                    end = speed - 1
-
+                start = speed + 1
 
         return end + 1
 
