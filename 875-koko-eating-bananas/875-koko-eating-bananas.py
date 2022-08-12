@@ -12,6 +12,7 @@ class Solution:
 
                 if hour > h:
                     start = speed + 1
+                    break
             else:
                 if hour <= h:
                     end = speed - 1
