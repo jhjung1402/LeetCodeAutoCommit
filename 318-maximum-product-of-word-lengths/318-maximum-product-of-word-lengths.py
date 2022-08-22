@@ -1,7 +1,6 @@
 class Solution:
     def maxProduct(self, words: List[str]) -> int:
         words = list(set(words))
-        print(words)
         
         _max = 0
         for i in range(0, len(words)):
