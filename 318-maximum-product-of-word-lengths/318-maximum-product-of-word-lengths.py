@@ -1,5 +1,6 @@
 class Solution:
     def maxProduct(self, words: List[str]) -> int:
+        '''
         dic = {}
         
         for word in words:
@@ -14,7 +15,19 @@ class Solution:
                     _max = max(_max, len(k1) * len(k2))
         
         return _max
+        '''
+        _max = 0
+        for i in range(0, len(words)):
+            w1 = words[i]
+            al1 = set(w1)
+            for j in range(i + 1, len(words)):
+                w2 = words[j]
+                al2 = set(w2)
                 
+                if not (al1 & al2):
+                    _max = max(_max, len(w1) * len(w2))
+        return _max
+        
                 
         
         
