@@ -3,9 +3,11 @@ from heapq import heappush, heappop
 
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        nums = list(itertools.chain.from_iterable(matrix))
+        nums = sorted(list(itertools.chain.from_iterable(matrix)))
         length = len(nums)
+        return nums[k - 1]
         
+        '''
         heap = []
         if k <= length / 2: #최소힙
             for num in nums:
@@ -20,7 +22,7 @@ class Solution:
             
         
         return heappop(heap)[1]
-            
+        '''
             
             
         
