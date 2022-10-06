@@ -11,10 +11,9 @@ class Solution:
             str2int = ''
             for w in word:
                 str2int += alien_order[w]
-            if pre_str2int <= str2int:
-                pre_str2int = str2int
-            else:
+            if pre_str2int > str2int:
                 break
+            pre_str2int = str2int
         else:
             answer = True
             
