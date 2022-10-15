@@ -5,8 +5,6 @@ class Solution:
         
         cols = list(map(list, zip(*grid)))
       
-        print(rows)
-        print(cols)
         cnt = 0
         for row in rows:
             for col in cols:
